@@ -1,0 +1,193 @@
+<html>
+    <head>
+        <title>Curso CSS3 Avancado</title>
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <style>
+            body {
+                margin: 0;
+            }
+            
+            nav {
+                position: fixed;
+                width: 100%;
+                background-color: rgba(0,0,0,0.2);
+            }  
+            
+            nav img {
+                position: absolute;
+                left:10px;top:10px;
+                z-index: 1;
+            }
+            
+            nav ul#menu-desktop {
+                margin:0;
+                padding:0;
+                text-align: right;
+            }
+
+            nav ul#menu-desktop li {
+                list-style-type:none;
+                display: inline;
+            }
+
+            nav ul#menu-desktop li a {
+                padding: 30px 40px;
+                text-decoration: none;
+                
+                color:#FFF;
+                display: inline-block;
+                margin-right: -3px;
+                font-family: Roboto, sans-serif;
+                font-size: 80%;
+                letter-spacing: 0.60
+            }
+
+            nav ul#menu-desktop li a:hover {
+                background-color: rgba(213,26,44,1);
+            }
+            
+            nav ul#menu-mobile {
+                display: none;   
+            }
+            
+            nav div#menu-btn {
+                display: none;
+            }  
+        
+            header {
+                width: 100%;
+                height: 800px;
+                margin: 0 auto;
+            }
+            
+            header img {
+                width:  100%;
+                height: 100%;
+                
+                object-fit: cover;
+                object-position: top center
+            } 
+            
+            /* para mobile */
+            @media only screen and (min-width:320px) and (max-width:700px) {
+                header {
+                    height: 320px; 
+                    margin-top: 70px;
+                }
+                
+                nav {
+                    position: absolute;
+                    left:0;top:0;
+                    width: 100%;
+                    height: 70px;
+                    background-color: #333;
+                }  
+                
+                nav img {
+                    width:70px;
+                    left:50%;
+                    margin-left: -35px;
+                }
+                
+                nav ul#menu-desktop {
+                    display: none;
+                    margin-top: 70px;
+                }
+                
+                nav ul#menu-mobile {
+                    margin:70px 0 0 0;padding:0;                 
+                }
+                
+                nav ul#menu-mobile li {
+                    width:100%;
+                    list-style-type:none;
+                    display: block;
+                } 
+                
+                nav ul#menu-mobile li a {
+                    padding: 20px 0;
+                    text-decoration: none;
+                    background-color: rgba(213,26,44,1);
+                    color:#FFF;
+                    display:block;
+                    margin-right:none;
+                    font-family: Roboto, sans-serif;
+                    font-size: 80%;
+                    letter-spacing: 0.60;
+                    text-align: center;
+                    border-bottom: 1px solid #111;
+                } 
+                
+                nav div#menu-btn {
+                    position:absolute;
+                    cursor: pointer;
+                    display: block;
+                    top:20px;
+                    right:20px;
+                    height: 30px;
+                    width: 30px;
+                }                   
+            }   
+            
+            @media only screen and (min-width:701px) and (max-width:2880px) {
+                nav ul#menu-mobile {
+                    display: none;   
+                }
+                
+                body {
+                    background-color: aqua
+                }
+            }
+            
+        </style>
+    </head>
+    <body>      
+        <nav>
+            <img src="_img/logo-pizzaria-grande.png">
+            <ul id="menu-desktop">
+                <li><a href="">PIZZAS</a></li>
+                <li><a href="">MEUS PEDIDOS</a></li>
+                <li><a href="">CONTATO</a></li>
+                <li><a href="">LOGIN</a></li>
+            </ul>
+            
+            <ul id="menu-mobile">
+                <li><a href="">PIZZAS</a></li>
+                <li><a href="">MEUS PEDIDOS</a></li>
+                <li><a href="">CONTATO</a></li>
+                <li><a href="">LOGIN</a></li>
+            </ul>            
+
+            <div id="menu-btn">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5"     stroke="#fff" stroke-width="4"/>
+                    <path d="M0,15 30,15"   stroke="#fff" stroke-width="4"/>
+                    <path d="M0,25 30,25"   stroke="#fff" stroke-width="4"/>
+                </svg>
+            </div>
+        </nav>
+        
+        <header>
+            <img src="_img/foto-capa-pizza.jpg">
+        </header>
+        
+        
+        <script src="_js/jquery.js"></script> 
+        <script>
+            $(function() {
+                $("#menu-btn").click(function(e) {
+                    $("nav ul#menu-mobile").toggle(); 
+                });
+                
+                $(window).resize(function(e) {
+                    var largura = $(window).width();
+                    if(largura >= 701) {
+                       $("nav ul#menu-mobile").hide(); 
+                    } 
+                });
+            });
+        </script>
+    
+    </body>
+</html>

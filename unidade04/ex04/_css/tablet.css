@@ -1,0 +1,31 @@
+main, article, aside {
+    width:90%;	
+}
+
+header {
+    width: 100%;   
+}
+
+aside {
+    float: none;
+    margin:0 auto;
+}
+
+aside img:nth-child(1) {
+    float: left;
+}
+
+aside img:nth-child(2) {
+    float: right;
+}
+
+@media (max-width:695px) {
+    aside {
+        text-align: center;
+    }
+    
+    aside img:nth-child(1), aside img:nth-child(2) {
+        float: none;
+        text-align: center;
+    }  
+}

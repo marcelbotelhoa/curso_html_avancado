@@ -1,0 +1,25 @@
+<!--- codigo SVG do botao do menu --->
+<div id="menu-btn">
+    <svg width="30" height="30">
+        <path d="M0,5 30,5"     stroke="#fff" stroke-width="4"/>
+        <path d="M0,15 30,15"   stroke="#fff" stroke-width="4"/>
+        <path d="M0,25 30,25"   stroke="#fff" stroke-width="4"/>
+    </svg>
+</div>
+
+<!--- codigo jQuery --->
+<script src="_js/jquery.js"></script> 
+<script>
+    $(function() {
+        $("#menu-btn").click(function(e) {
+            $("nav ul#menu-mobile").toggle(); 
+        });
+
+        $(window).resize(function(e) {
+            var largura = $(window).width();
+            if(largura >= 701) {
+               $("nav ul#menu-mobile").hide(); 
+            } 
+        });
+    });
+</script>

@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Curso CSS3 Avancado</title>
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        
+        <link href="_css/estilo.css"            rel="stylesheet"/>
+        <link href="_css/mobile.css"            rel="stylesheet" media="screen and (min-width:300px) and (max-width:700px)">
+        <link href="_css/desktop-grande.css"    rel="stylesheet">
+    </head>
+    <body>      
+        <nav>
+            <img src="_img/logo-pizzaria-grande.png">
+            <ul id="menu-desktop">
+                <li><a href="">PIZZAS</a></li>
+                <li><a href="">MEUS PEDIDOS</a></li>
+                <li><a href="">CONTATO</a></li>
+                <li><a href="">LOGIN</a></li>
+            </ul> 
+            
+            <ul id="menu-mobile">
+                <li><a href="">PIZZAS</a></li>
+                <li><a href="">MEUS PEDIDOS</a></li>
+                <li><a href="">CONTATO</a></li>
+                <li><a href="">LOGIN</a></li>
+            </ul> 
+            
+            <div id="menu-btn">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5"     stroke="#fff" stroke-width="4"/>
+                    <path d="M0,15 30,15"   stroke="#fff" stroke-width="4"/>
+                    <path d="M0,25 30,25"   stroke="#fff" stroke-width="4"/>
+                </svg>
+            </div>            
+        </nav>
+        
+        <header>
+
+        </header>
+        
+        <main>
+            <section id="apresentacao">
+                <section class="pizzas">
+                    <img src="_img/pizza1.jpg">
+                    <h3>Margueritta</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas accumsan ante at luctus condimentum. Aliquam mollis venenatis justo quis maximus.</p>
+                    <a href="">APENAS R$ 29,99</a>
+                </section>
+
+                <section class="pizzas centro">
+                    <img src="_img/pizza2.jpg">
+                    <h3>Calabresa</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas accumsan ante at luctus condimentum. Aliquam mollis venenatis justo quis maximus.</p>
+                    <a href="">APENAS R$ 29,99</a>                    
+                </section>
+
+                <section class="pizzas direita">
+                    <img src="_img/pizza4.jpg">
+                    <h3>Brasileira</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas accumsan ante at luctus condimentum. Aliquam mollis venenatis justo quis maximus.</p>
+                    <a href="">APENAS R$ 29,99</a>                
+                </section>                
+            </section>
+        </main>        
+        
+        <script src="_js/jquery.js"></script>
+        <script>
+            $(function() {
+                $("div#menu-btn").click(function() {
+                    $("nav ul#menu-mobile").toggle();
+                });
+                
+                $(window).resize(function() {
+                   var largura = $(window).width(); 
+                    if ( largura >= 701 ) {
+                        $("nav ul#menu-mobile").hide();   
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

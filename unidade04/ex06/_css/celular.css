@@ -1,0 +1,59 @@
+main {
+    width: 90%;
+    text-align: center;
+    box-shadow: none;
+}
+
+article {
+    padding:5%;
+    float: none;
+}
+
+header {
+    background: url("../_img/topo_mobile_440-centralizado.jpg") center no-repeat; 
+    height: 86px;
+}
+
+article h1, article h2 {
+    text-shadow: none;   
+}
+
+article p {
+    text-align: center;
+    display: block;
+}
+
+article img {
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    float: none;
+}
+
+/* mostrar menu do mobile */
+nav#menu_mobile {
+	display:block;
+	width:80%;	
+	margin:20px auto;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+nav#menu_mobile ul {
+	margin:0;padding:0;
+}
+
+nav#menu_mobile li {
+	list-style:none;
+}
+
+nav#menu_mobile li  a {
+	display:block;
+	background-color:rgb(79,22,23);
+	padding:5% 2%;
+	text-decoration:none;
+	color:rgb(255,255,255);
+	margin-bottom:1px;
+}
+
+

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="ISO-8859-2">
+        <title>Curso de CSS - Transform-origin</title>
+        <style type="text/css">
+            article, aside, section, header, footer, nav {
+                display:block;
+            }
+
+            main {
+                position:relative;
+                width:760px;
+                height:500px;
+                margin:10px auto;
+                box-shadow:0 0 10px #999999;
+                background-color:rgb(255,255,255);
+                text-align:center;
+            }
+
+            main:after {
+                clear:both;
+            }
+
+            header {
+                width:760px;
+                height:110px;
+                background-image:url(../_img/topo.jpg);
+                background-repeat:no-repeat;
+                margin-bottom:40px;
+            }
+
+            div#janela1, div#janela2 {
+                position:absolute;
+                width:150px;height:150px;
+                top:130px;
+            }
+
+            div#janela1 {
+                left:10px;
+                background-color:rgb(0,102,204);
+                cursor:pointer;
+            }
+
+            div#janela2 {
+                left:180px;
+                background-color:rgb(255,0,0);
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <header></header>
+            <div id="janela1"></div>
+            <div id="janela2"></div>
+        </main>
+    </body>
+</html>
